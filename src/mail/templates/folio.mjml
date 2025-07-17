@@ -1,0 +1,103 @@
+<mjml>
+  <mj-head>
+    <mj-title>Folios pendientes por cancelar</mj-title>
+    <mj-preview>Tienes folios de facturas que requieren tu atención</mj-preview>    
+  </mj-head>
+  <mj-body background-color="#f0f0f0">
+    
+    <mj-section background-color="#ffffff" padding-left="20px" padding-bottom="5px" padding-top="5px">
+      
+      <mj-column padding-top="20px">
+        
+        <mj-image width="60px" src="https://cdn-icons-png.flaticon.com/512/1484/1484881.png" alt="Alerta" />
+        
+        <mj-text font-size="20px" font-family="Helvetica Neue" align="left" color="#333333" font-weight="bold" padding-top="33px">
+          Hola {{nombre_usuario}},
+        </mj-text>
+        
+        <mj-text font-size="16px" color="#333333" line-height="1.5">
+          Te informamos que el folio <strong style="color: #FF0000">{{folio}}</strong> esta pendiente de cancelación en el Sistema de Facturación.
+        </mj-text>
+        
+         <mj-text font-size="16px" color="#333333" line-height="1.5">
+					Por favor ingresa y realiza la acción correspondiente.
+        </mj-text>
+
+        <mj-divider border-color="#cccccc" />
+        
+        <mj-text font-size="16px" font-weight="bold">
+        	{{legalNameCompany}}
+        </mj-text>
+        
+         <mj-text font-size="16px">
+        	{{rfc}}
+         </mj-text>        
+        
+      </mj-column>
+			
+    </mj-section>
+    
+    
+    <mj-section background-color="#FFFFFF" padding-left="20px" padding-top="0">
+	      <mj-column>
+         
+          <mj-text font-size="16px" font-weight="bold">
+  	      	Folio a Cancelar
+	        </mj-text>
+        
+         <mj-text font-size="18px">
+           <strong style="color: #FF0000">{{folio}}</strong>
+         </mj-text>
+          
+          <mj-text font-size="16px">
+  	      	Subtotal: {{subtotal}}
+	        </mj-text>
+        		
+        </mj-column>
+      
+
+			 	<mj-column>
+          <mj-text font-size="16px" font-weight="bold">
+            Folio de Reemplazo
+          </mj-text>
+
+          {{#if showFolio}}
+            <mj-text font-size="18px">
+              <strong style="color: #2EBEB1">{{replacedFolio}}</strong>
+            </mj-text>
+          {{else}}
+            <mj-text font-size="14px">
+              <strong>N/A</strong>
+            </mj-text>
+          {{/if}}
+        </mj-column>
+      
+    </mj-section>
+    
+		<mj-section background-color="#FFFFFF" padding-left="20px" padding-top="0">
+      <mj-column>
+        <mj-divider border-color="#cccccc" />        
+        <mj-text color="#777777">
+        	Atentamente:
+	      </mj-text>
+        <mj-text padding-top="20px">
+        	Plataforma Citio
+	      </mj-text>
+        <mj-text font-size="20px" padding-top="20px" align="center">
+        	¡Gracias!
+	      </mj-text>
+        
+      </mj-column>
+
+    </mj-section>
+
+    <mj-section background-color="#2A144F" padding="10px">
+      <mj-column>
+        <mj-text font-size="12px" color="#FFFFFF" align="center">
+          Este correo es generado automáticamente. Por favor, no respondas a este mensaje.<br /><br />
+          © 2025 Citio – Todos los derechos reservados.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
